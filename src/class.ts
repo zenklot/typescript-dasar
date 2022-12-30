@@ -16,8 +16,41 @@ export class Pengguna {
         this.name = name;
         this.age = age;
     }
+    setName(value: string) {
+        this.name = value;
+    }
+    getName() : string { 
+        return this.name;
+    }
 }
 
 let pengguna = new Pengguna('Zenklot', 16)
 
 console.log(pengguna)
+
+
+// Pewarisan Inheritance
+
+/*
+Pengguna :
+- Admin
+- User
+*/
+
+class Admin extends Pengguna {
+    read: boolean = true;
+    write: boolean = true;
+
+    getRole(): { read: boolean; write: boolean} {
+        return {
+            read: this.read,
+            write: this.write
+        }
+    }
+}
+
+let admin1 = new Admin('Supri', 20)
+
+console.log(admin1)
+admin1.setName('Zenk')
+console.log(admin1.getName())
