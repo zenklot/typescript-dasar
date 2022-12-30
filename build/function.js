@@ -27,3 +27,9 @@ const fullName = (firstName, lastName = "Supriatna") => {
 };
 console.log(fullName('Gozenx'));
 console.log(fullName("Raisa", "Supri"));
+// Optional Argument menggunakan ?
+const getUmur = (val1, val2) => {
+    return val1 + " " + val2 + " Tahun";
+};
+console.log(getUmur('Gozenx', '12'));
+console.log(getUmur('20'));
