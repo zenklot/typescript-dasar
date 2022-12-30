@@ -41,6 +41,7 @@ class Admin extends Pengguna {
     read: boolean = true;
     write: boolean = true;
     phone: string;
+    private _email: string = "";
 
     constructor(phone: string, name: string, age: number) {
         super(name, age);
@@ -52,6 +53,16 @@ class Admin extends Pengguna {
             write: this.write
         }
     }
+    set email(value: string) {
+        if(value.length < 5) {
+            this._email = 'Email Salah'
+        }else{
+            this._email = value;
+        }
+    }
+    get email() : string {
+        return this._email;
+    }
 }
 
 let admin1 = new Admin('085223','Supri', 20)
@@ -60,4 +71,5 @@ console.log(admin1)
 admin1.setName('Zenk')
 console.log(admin1.getName())
 
-
+admin1.email = 'supri@gmail.com'
+console.log(admin1.email)
