@@ -40,7 +40,12 @@ Pengguna :
 class Admin extends Pengguna {
     read: boolean = true;
     write: boolean = true;
+    phone: string;
 
+    constructor(phone: string, name: string, age: number) {
+        super(name, age);
+        this.phone = phone;
+    }
     getRole(): { read: boolean; write: boolean} {
         return {
             read: this.read,
@@ -49,8 +54,10 @@ class Admin extends Pengguna {
     }
 }
 
-let admin1 = new Admin('Supri', 20)
+let admin1 = new Admin('085223','Supri', 20)
 
 console.log(admin1)
 admin1.setName('Zenk')
 console.log(admin1.getName())
+
+

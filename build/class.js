@@ -33,10 +33,11 @@ Pengguna :
 - User
 */
 class Admin extends Pengguna {
-    constructor() {
-        super(...arguments);
+    constructor(phone, name, age) {
+        super(name, age);
         this.read = true;
         this.write = true;
+        this.phone = phone;
     }
     getRole() {
         return {
@@ -45,7 +46,7 @@ class Admin extends Pengguna {
         };
     }
 }
-let admin1 = new Admin('Supri', 20);
+let admin1 = new Admin('085223', 'Supri', 20);
 console.log(admin1);
 admin1.setName('Zenk');
 console.log(admin1.getName());
