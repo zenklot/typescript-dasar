@@ -42,11 +42,17 @@ class Admin extends Pengguna {
     write: boolean = true;
     phone: string;
     private _email: string = "";
+    static getRoleName : string = "Admin";
 
     constructor(phone: string, name: string, age: number) {
         super(name, age);
         this.phone = phone;
     }
+
+    static getNameRole() {
+        return "Hai ADMIN"
+    }
+
     getRole(): { read: boolean; write: boolean} {
         return {
             read: this.read,
@@ -73,3 +79,9 @@ console.log(admin1.getName())
 
 admin1.email = 'supri@gmail.com'
 console.log(admin1.email)
+
+
+let admin2 = Admin.getRoleName
+console.log('RoleName : ', admin2)
+let admin3 = Admin.getNameRole()
+console.log('RoleName : ', admin3)
