@@ -21,3 +21,9 @@ let age = 20;
 const add = (val1, val2) => {
     return val1 + val2;
 };
+// Default Argument
+const fullName = (firstName, lastName = "Supriatna") => {
+    return firstName + ' ' + lastName;
+};
+console.log(fullName('Gozenx'));
+console.log(fullName("Raisa", "Supri"));

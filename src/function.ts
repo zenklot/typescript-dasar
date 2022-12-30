@@ -37,3 +37,12 @@ type Tambah = (val1: number, val2: number) => number;
 const add : Tambah = (val1: number, val2: number): number => {
     return val1 + val2;
 }
+
+
+// Default Argument
+const fullName = (firstName: string, lastName: string = "Supriatna"): string  => {
+    return firstName + ' ' + lastName;
+}
+
+console.log(fullName('Gozenx'))
+console.log(fullName("Raisa", "Supri"))
