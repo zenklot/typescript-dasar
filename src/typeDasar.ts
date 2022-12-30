@@ -24,3 +24,12 @@ heroes = 19;
 heroes = false;
 heroes = {};
 heroes = [];
+
+
+// UNION TYPE
+6289886
+"089886"
+
+let phone : number | string;
+phone = 6289886
+phone = "08724412"
