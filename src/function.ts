@@ -17,3 +17,23 @@ function printName(): void {
 }
 
 printName()
+
+
+// Argument Type
+
+function perkalian(val1 : number, val2: number) : number {
+    return val1 * val2;
+}
+
+console.log(perkalian(10, 5))
+
+
+// Function as Type
+type Age = number;
+let age: Age = 20;
+
+type Tambah = (val1: number, val2: number) => number;
+
+const add : Tambah = (val1: number, val2: number): number => {
+    return val1 + val2;
+}

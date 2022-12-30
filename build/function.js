@@ -12,3 +12,12 @@ function printName() {
     console.log('print:', getName());
 }
 printName();
+// Argument Type
+function perkalian(val1, val2) {
+    return val1 * val2;
+}
+console.log(perkalian(10, 5));
+let age = 20;
+const add = (val1, val2) => {
+    return val1 + val2;
+};
